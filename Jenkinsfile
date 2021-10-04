@@ -1,3 +1,4 @@
+@Library('shared-library') _
 pipeline {
     agent any
     environment {
@@ -13,7 +14,7 @@ pipeline {
             steps {
                 script {
                     buildDocker.buildNum()
-                    buildDocker.myAppDocker()
+                    buildDocker.myAppDocker('geraldine28')
                 }
             }
         }

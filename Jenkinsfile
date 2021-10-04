@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     buildDocker.buildNum()
-                    buildDocker.myAppDocker()
+                    buildDocker.myAppNpm()
                 }
             }
         }

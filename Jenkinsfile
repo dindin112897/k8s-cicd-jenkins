@@ -6,12 +6,13 @@ pipeline {
     stages {
         stage("Checkout code") {
             steps {
-                checkout scm
+                checkOut()
             }
         }
         stage("Build image") {
             steps {
                 script {
+                    buildDocker.buildNum()
                     buildDocker.myAppDocker()
                 }
             }

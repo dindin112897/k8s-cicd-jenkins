@@ -13,7 +13,6 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    buildDocker.buildNum()
                     buildDocker.myAppNpm()
                 }
             }

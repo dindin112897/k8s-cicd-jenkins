@@ -13,6 +13,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
+                    welcome()
                     buildDocker.myAppNpm()
                 }
             }

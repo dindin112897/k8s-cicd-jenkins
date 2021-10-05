@@ -13,7 +13,8 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    welcome(name:"Geraldine", dayOfWeek:"Tuesday")
+                    welcome("Geraldine","Tuesday")
+                    helloWorldExternal(name:"Geraldine", dayOfWeek:"Tuesday")
                     buildDocker.myAppNpm()
                 }
             }
